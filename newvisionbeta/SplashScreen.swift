@@ -7,38 +7,37 @@ struct SplashScreen: View {
     
     // Customise your SplashScreen here
     var body: some View {
-        if isActive {
-            ContentView()
-        } else {
-            VStack {
+        ZStack {
+            Color.black
+            if isActive {
+                ContentView()
+            } else {
                 VStack {
-                    Image("LogoNew")
-                        .resizable()
-                        .frame(width: 120, height:120)
-                        .cornerRadius(30.0)
-                    
-                    Text("Codigo de prueba 2")
-                    Text("Matzu")
-                        .font(Font.custom("Baskerville-Bold", size: 26))
-                        .foregroundColor(.black.opacity(0.80))
+                    VStack {
+                        Image("logo")
+                            .resizable()
+                            .frame(width: 120, height:120)
+                            .cornerRadius(30.0)
+                    }
+                    .scaleEffect(size)
+                    .opacity(opacity)
+                    .onAppear {
+                        withAnimation(.easeIn(duration: 1.2)) {
+                            self.size = 0.9
+                            self.opacity = 1.00
+                        }
+                    }
+                    //                }
                 }
-                .scaleEffect(size)
-                .opacity(opacity)
                 .onAppear {
-                    withAnimation(.easeIn(duration: 1.2)) {
-                        self.size = 0.9
-                        self.opacity = 1.00
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                        withAnimation {
+                            self.isActive = true
+                        }
                     }
                 }
             }
-            .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                    withAnimation {
-                        self.isActive = true
-                    }
-                }
-            }
-        }
+        }.ignoresSafeArea()
     }
 }
 
