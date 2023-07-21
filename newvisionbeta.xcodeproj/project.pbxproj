@@ -14,6 +14,8 @@
 		6CD598F92A6A3583005099DE /* newvisionbetaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD598F82A6A3583005099DE /* newvisionbetaTests.swift */; };
 		6CD599032A6A3583005099DE /* newvisionbetaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD599022A6A3583005099DE /* newvisionbetaUITests.swift */; };
 		6CD599052A6A3583005099DE /* newvisionbetaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD599042A6A3583005099DE /* newvisionbetaUITestsLaunchTests.swift */; };
+		6CD599122A6A36C4005099DE /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD599112A6A36C4005099DE /* SplashScreen.swift */; };
+		6CD599142A6A36D4005099DE /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD599132A6A36D4005099DE /* MainScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		6CD598FE2A6A3583005099DE /* newvisionbetaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = newvisionbetaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CD599022A6A3583005099DE /* newvisionbetaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newvisionbetaUITests.swift; sourceTree = "<group>"; };
 		6CD599042A6A3583005099DE /* newvisionbetaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newvisionbetaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6CD599112A6A36C4005099DE /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		6CD599132A6A36D4005099DE /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				6CD598E72A6A3582005099DE /* newvisionbetaApp.swift */,
 				6CD598E92A6A3582005099DE /* ContentView.swift */,
+				6CD599112A6A36C4005099DE /* SplashScreen.swift */,
+				6CD599132A6A36D4005099DE /* MainScreen.swift */,
 				6CD598EB2A6A3583005099DE /* Assets.xcassets */,
 				6CD598ED2A6A3583005099DE /* Preview Content */,
 			);
@@ -257,6 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CD599142A6A36D4005099DE /* MainScreen.swift in Sources */,
+				6CD599122A6A36C4005099DE /* SplashScreen.swift in Sources */,
 				6CD598EA2A6A3582005099DE /* ContentView.swift in Sources */,
 				6CD598E82A6A3582005099DE /* newvisionbetaApp.swift in Sources */,
 			);
