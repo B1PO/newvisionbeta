@@ -17,6 +17,7 @@ struct SplashScreen: View {
                         .frame(width: 120, height:120)
                         .cornerRadius(30.0)
                     
+                    Text("Codigo de prueba 2")
                     Text("Matzu")
                         .font(Font.custom("Baskerville-Bold", size: 26))
                         .foregroundColor(.black.opacity(0.80))
