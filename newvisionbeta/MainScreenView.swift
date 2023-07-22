@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct MainScreen: View {
+struct MainScreenview: View {
     var body: some View {
         VStack {
             Text("Hi, World!")
@@ -9,8 +9,8 @@ struct MainScreen: View {
     }
 }
 
-struct MainScreen_Previews: PreviewProvider {
+struct MainScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        MainScreen()
+        MainScreenview()
     }
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		528D2FE12A6B969600B78603 /* SlideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D2FE02A6B969600B78603 /* SlideMenuView.swift */; };
+		528D2FE32A6B96A400B78603 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D2FE22A6B96A400B78603 /* Color.swift */; };
+		528D2FE52A6B96FC00B78603 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D2FE42A6B96FC00B78603 /* HomeView.swift */; };
 		6CD598E82A6A3582005099DE /* newvisionbetaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD598E72A6A3582005099DE /* newvisionbetaApp.swift */; };
 		6CD598EA2A6A3582005099DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD598E92A6A3582005099DE /* ContentView.swift */; };
 		6CD598EC2A6A3583005099DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CD598EB2A6A3583005099DE /* Assets.xcassets */; };
@@ -14,9 +17,9 @@
 		6CD598F92A6A3583005099DE /* newvisionbetaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD598F82A6A3583005099DE /* newvisionbetaTests.swift */; };
 		6CD599032A6A3583005099DE /* newvisionbetaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD599022A6A3583005099DE /* newvisionbetaUITests.swift */; };
 		6CD599052A6A3583005099DE /* newvisionbetaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD599042A6A3583005099DE /* newvisionbetaUITestsLaunchTests.swift */; };
-		6CD599122A6A36C4005099DE /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD599112A6A36C4005099DE /* SplashScreen.swift */; };
-		6CD599142A6A36D4005099DE /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD599132A6A36D4005099DE /* MainScreen.swift */; };
-		6CD599162A6A440C005099DE /* NavegationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD599152A6A440C005099DE /* NavegationBar.swift */; };
+		6CD599122A6A36C4005099DE /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD599112A6A36C4005099DE /* SplashScreenView.swift */; };
+		6CD599142A6A36D4005099DE /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD599132A6A36D4005099DE /* MainScreenView.swift */; };
+		6CD599162A6A440C005099DE /* NavegationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD599152A6A440C005099DE /* NavegationBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		528D2FE02A6B969600B78603 /* SlideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuView.swift; sourceTree = "<group>"; };
+		528D2FE22A6B96A400B78603 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		528D2FE42A6B96FC00B78603 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		6CD598E42A6A3582005099DE /* newvisionbeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newvisionbeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CD598E72A6A3582005099DE /* newvisionbetaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newvisionbetaApp.swift; sourceTree = "<group>"; };
 		6CD598E92A6A3582005099DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,9 +53,9 @@
 		6CD598FE2A6A3583005099DE /* newvisionbetaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = newvisionbetaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CD599022A6A3583005099DE /* newvisionbetaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newvisionbetaUITests.swift; sourceTree = "<group>"; };
 		6CD599042A6A3583005099DE /* newvisionbetaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newvisionbetaUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		6CD599112A6A36C4005099DE /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
-		6CD599132A6A36D4005099DE /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
-		6CD599152A6A440C005099DE /* NavegationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavegationBar.swift; sourceTree = "<group>"; };
+		6CD599112A6A36C4005099DE /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		6CD599132A6A36D4005099DE /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		6CD599152A6A440C005099DE /* NavegationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavegationBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +108,12 @@
 			children = (
 				6CD598E72A6A3582005099DE /* newvisionbetaApp.swift */,
 				6CD598E92A6A3582005099DE /* ContentView.swift */,
-				6CD599112A6A36C4005099DE /* SplashScreen.swift */,
-				6CD599152A6A440C005099DE /* NavegationBar.swift */,
-				6CD599132A6A36D4005099DE /* MainScreen.swift */,
+				6CD599112A6A36C4005099DE /* SplashScreenView.swift */,
+				6CD599152A6A440C005099DE /* NavegationBarView.swift */,
+				6CD599132A6A36D4005099DE /* MainScreenView.swift */,
+				528D2FE02A6B969600B78603 /* SlideMenuView.swift */,
+				528D2FE42A6B96FC00B78603 /* HomeView.swift */,
+				528D2FE22A6B96A400B78603 /* Color.swift */,
 				6CD598EB2A6A3583005099DE /* Assets.xcassets */,
 				6CD598ED2A6A3583005099DE /* Preview Content */,
 			);
@@ -266,11 +275,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CD599142A6A36D4005099DE /* MainScreen.swift in Sources */,
-				6CD599122A6A36C4005099DE /* SplashScreen.swift in Sources */,
-				6CD599162A6A440C005099DE /* NavegationBar.swift in Sources */,
+				6CD599142A6A36D4005099DE /* MainScreenView.swift in Sources */,
+				6CD599122A6A36C4005099DE /* SplashScreenView.swift in Sources */,
+				528D2FE32A6B96A400B78603 /* Color.swift in Sources */,
+				6CD599162A6A440C005099DE /* NavegationBarView.swift in Sources */,
 				6CD598EA2A6A3582005099DE /* ContentView.swift in Sources */,
+				528D2FE52A6B96FC00B78603 /* HomeView.swift in Sources */,
 				6CD598E82A6A3582005099DE /* newvisionbetaApp.swift in Sources */,
+				528D2FE12A6B969600B78603 /* SlideMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

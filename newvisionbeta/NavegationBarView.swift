@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct NavegationBar: View {
+struct NavegationBarView: View {
     var body: some View {
         Text("Navigation bar")
     }
 }
 
-struct NavegationBar_Previews: PreviewProvider {
+struct NavegationBarView_Previews: PreviewProvider {
     static var previews: some View {
-        NavegationBar()
+        NavegationBarView()
     }
 }

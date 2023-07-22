@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct SplashScreen: View {
+struct SplashScreenview: View {
     @State var isActive : Bool = false
     @State private var size = 0.8
     @State private var opacity = 0.5
@@ -41,9 +41,9 @@ struct SplashScreen: View {
     }
 }
 
-struct SplashScreen_Previews: PreviewProvider {
+struct SplashScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        SplashScreen()
+        SplashScreenview()
     }
 }
 
