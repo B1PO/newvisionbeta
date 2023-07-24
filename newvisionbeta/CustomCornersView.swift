@@ -2,19 +2,20 @@
 //  CustomCornersView.swift
 //  newvisionbeta
 //
-//  Created by Pedro Prado on 23/07/23.
+//  Created by Emilia Zuñiga Losada on 21/07/23.
 //
 
 import SwiftUI
 
-struct CustomCornersView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct CustomCornersView: Shape {
+    
+    var corners: UIRectCorner
+    var radius: CGFloat
+    
+    func path (in rect: CGRect) -> Path {
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        
+        return Path(path.cgPath)
     }
 }
 
-struct CustomCornersView_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomCornersView()
-    }
-}

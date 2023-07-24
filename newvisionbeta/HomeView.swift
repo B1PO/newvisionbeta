@@ -1,20 +1,37 @@
-//
-//  HomeView.swift
-//  newvisionbeta
-//
-//  Created by Emilia Zuñiga Losada on 21/07/23.
-//
-
 import SwiftUI
 
 struct HomeView: View {
+    
+    @Binding var selectedTab: String
+    
+    init(selectTab: Binding<String>) {
+        self._selectedTab = selectTab
+        UITableView.appearance().isHidden = true
+    }
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView(selection: $selectedTab){
+            HomePage()
+                .tag("Home")
+        }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        MainSideView()
     }
 }
+
+struct HomePage: View {
+    var body: some View {
+        //Color.blue.ignoresSafeArea()
+        NavigationView {
+            Text("Home")
+                .font(.largeTitle)
+                .fontWeight(.heavy)
+                .foregroundColor(.primary)
+                .navigationTitle("Home")
+        }
+    }
+}
+
