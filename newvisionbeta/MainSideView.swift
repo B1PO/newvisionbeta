@@ -30,8 +30,8 @@ struct MainSideView: View {
                 HomeView(selectTab: $selectedTab)
                     .cornerRadius(showMenu ? 20 : 0)
             }
-            .scaleEffect(showMenu ? 0.84 : 1)
-            .offset(x: showMenu ? getRect().width - 140 : 0)
+            .scaleEffect(showMenu ? 1 : 1)
+            .offset(x: showMenu ? getRect().width - 100 : 0)
             .ignoresSafeArea()
             
             .overlay(

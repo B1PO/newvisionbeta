@@ -26,11 +26,8 @@ struct HomePage: View {
     var body: some View {
         //Color.blue.ignoresSafeArea()
         NavigationView {
-            Text("Home")
-                .font(.largeTitle)
-                .fontWeight(.heavy)
-                .foregroundColor(.primary)
-                .navigationTitle("Home")
+            NavigationBar()
+                .padding(.bottom, -73)
         }
     }
 }
