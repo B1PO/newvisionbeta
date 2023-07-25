@@ -11,6 +11,11 @@
 		528D2FE32A6B96A400B78603 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D2FE22A6B96A400B78603 /* Color.swift */; };
 		528D2FE52A6B96FC00B78603 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D2FE42A6B96FC00B78603 /* HomeView.swift */; };
 		529B99672A6F880600B16989 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B99662A6F880600B16989 /* InformationView.swift */; };
+		529B99692A6F92D600B16989 /* AVCameraAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B99682A6F92D600B16989 /* AVCameraAppView.swift */; };
+		529B996B2A6F92E200B16989 /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B996A2A6F92E200B16989 /* CameraService.swift */; };
+		529B996D2A6F92F300B16989 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B996C2A6F92F300B16989 /* CameraView.swift */; };
+		529B996F2A6F930100B16989 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B996E2A6F930100B16989 /* CustomCameraView.swift */; };
+		529B99712A6F930C00B16989 /* MainCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B99702A6F930C00B16989 /* MainCameraView.swift */; };
 		6CD598E82A6A3582005099DE /* newvisionbetaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD598E72A6A3582005099DE /* newvisionbetaApp.swift */; };
 		6CD598EA2A6A3582005099DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD598E92A6A3582005099DE /* ContentView.swift */; };
 		6CD598EC2A6A3583005099DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CD598EB2A6A3583005099DE /* Assets.xcassets */; };
@@ -49,6 +54,11 @@
 		528D2FE22A6B96A400B78603 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		528D2FE42A6B96FC00B78603 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		529B99662A6F880600B16989 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		529B99682A6F92D600B16989 /* AVCameraAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCameraAppView.swift; sourceTree = "<group>"; };
+		529B996A2A6F92E200B16989 /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		529B996C2A6F92F300B16989 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		529B996E2A6F930100B16989 /* CustomCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
+		529B99702A6F930C00B16989 /* MainCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCameraView.swift; sourceTree = "<group>"; };
 		6CD598E42A6A3582005099DE /* newvisionbeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newvisionbeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CD598E72A6A3582005099DE /* newvisionbetaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newvisionbetaApp.swift; sourceTree = "<group>"; };
 		6CD598E92A6A3582005099DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -124,6 +134,11 @@
 				6CD599132A6A36D4005099DE /* MainScreenView.swift */,
 				528D2FE02A6B969600B78603 /* SideMenuView.swift */,
 				6CDDDFBB2A6F8A460095E358 /* UploadImageView.swift */,
+				529B99682A6F92D600B16989 /* AVCameraAppView.swift */,
+				529B996A2A6F92E200B16989 /* CameraService.swift */,
+				529B996C2A6F92F300B16989 /* CameraView.swift */,
+				529B996E2A6F930100B16989 /* CustomCameraView.swift */,
+				529B99702A6F930C00B16989 /* MainCameraView.swift */,
 				528D2FE42A6B96FC00B78603 /* HomeView.swift */,
 				6CDDDFB52A6E20360095E358 /* CustomCornersView.swift */,
 				6CDDDFB72A6E20520095E358 /* TabButtonView.swift */,
@@ -290,19 +305,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				529B99712A6F930C00B16989 /* MainCameraView.swift in Sources */,
 				6CD599142A6A36D4005099DE /* MainScreenView.swift in Sources */,
 				6CDDDFBC2A6F8A460095E358 /* UploadImageView.swift in Sources */,
 				6CD599122A6A36C4005099DE /* SplashScreenView.swift in Sources */,
 				6CDDDFB82A6E20520095E358 /* TabButtonView.swift in Sources */,
 				6CDDDFB62A6E20360095E358 /* CustomCornersView.swift in Sources */,
+				529B996B2A6F92E200B16989 /* CameraService.swift in Sources */,
 				6CDDDFBA2A6E206F0095E358 /* MainSideView.swift in Sources */,
 				528D2FE32A6B96A400B78603 /* Color.swift in Sources */,
 				6CD599162A6A440C005099DE /* NavegationBarView.swift in Sources */,
 				6CD598EA2A6A3582005099DE /* ContentView.swift in Sources */,
+				529B996F2A6F930100B16989 /* CustomCameraView.swift in Sources */,
 				528D2FE52A6B96FC00B78603 /* HomeView.swift in Sources */,
+				529B99692A6F92D600B16989 /* AVCameraAppView.swift in Sources */,
 				529B99672A6F880600B16989 /* InformationView.swift in Sources */,
 				6CD598E82A6A3582005099DE /* newvisionbetaApp.swift in Sources */,
 				528D2FE12A6B969600B78603 /* SideMenuView.swift in Sources */,
+				529B996D2A6F92F300B16989 /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
