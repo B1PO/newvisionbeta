@@ -83,7 +83,7 @@ struct NavigationBar: View {
             .transition(.asymmetric(insertion: .scale, removal: .opacity))
         case 3:
             VStack {
-                Text("File selection")
+                UploadImageView()
                     .foregroundColor(.white)
                     .font(.title)
                     .padding()
