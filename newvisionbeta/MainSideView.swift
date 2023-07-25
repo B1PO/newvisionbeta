@@ -10,7 +10,10 @@ struct MainSideView: View {
             Color.slideMenuColor
             
             //Main Menu
-            SideMenuView(selectedTab: $selectedTab)
+            ScrollView(getRect().height < 750 ? .vertical: .init(), showsIndicators: false, content: {
+                SideMenuView(selectedTab: $selectedTab)
+                
+            })
             
             ZStack{
                 Color.backgroundColor
