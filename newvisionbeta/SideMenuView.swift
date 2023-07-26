@@ -50,7 +50,7 @@ struct SideMenuView: View {
 //MainView TabButton CustomCorners
 struct SideMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        MainScreenview()
+        MainScreenView()
     }
 }
 
