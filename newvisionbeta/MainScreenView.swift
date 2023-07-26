@@ -110,7 +110,7 @@ struct FloatingText: View {
     }
     
     private func randomOffset() -> CGFloat {
-        return CGFloat.random(in: -5...5)
+        return CGFloat.random(in: -15...5)
     }
 }
 
