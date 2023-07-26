@@ -5,16 +5,17 @@
 //  Created by Emilia Zuñiga Losada on 24/07/23.
 //
 
-import SwiftUI
+import Foundation
+import AVFoundation
 
-struct CameraService: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct CameraService_Previews: PreviewProvider {
-    static var previews: some View {
-        CameraService()
+class CameraSevice {
+    var session: AVCaptureSession?
+    var delegate: AVCapturePhotoCaptureDelegate?
+    let output = AVCapturePhotoOutput ()
+    
+    let previewLaver = AVCaptureVideoPreviewLayer()
+    func start(delegate: AVCapturePhotoCaptureDelegate, completion: @escaping
+               (Error?) -> ()) {
+        self.delegate = delegate
     }
 }

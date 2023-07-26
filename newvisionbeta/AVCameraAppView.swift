@@ -6,15 +6,10 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct AVCameraAppView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct AVCameraAppView_Previews: PreviewProvider {
-    static var previews: some View {
-        AVCameraAppView()
+        Text("Esta nooo")
     }
 }

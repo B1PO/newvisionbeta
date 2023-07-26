@@ -4,7 +4,7 @@ import SwiftUI
 struct newvisionbetaApp: App {
     var body: some Scene {
         WindowGroup {
-            SplashScreenview()
+            CameraView()
         }
     }
 }
