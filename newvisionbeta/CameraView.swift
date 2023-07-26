@@ -28,13 +28,11 @@ struct CameraServiceView: View {
                 if camera.isTaken{
                     HStack{
                         Spacer()
-                        Button(action: {}, label: {
+                        Button(action: {camera.reTake()}, label: {
                             Image (systemName: "arrow.triangle.2.circlepath.camera")
                             .foregroundColor(.white)
                             .padding ()
-                            .background(
-                                LinearGradient(gradient: Gradient(colors: [Color.buttonColor1, Color.buttonColor2]), startPoint: .leading, endPoint: .trailing)
-                                )
+                            .background(.white)
                             .clipShape (Circle () )
                         })
                         .padding (.trailing,10)
@@ -45,22 +43,22 @@ struct CameraServiceView: View {
                 HStack{
                     //Si se mantiene presionado
                     if camera.isTaken{
-                        Button(action: {}, label: {
-                            Text ("Process")
+                        Button(action: {if !camera.isSaved{camera.savePic()}}, label: {
+                       
+                            Text (camera.isSaved ? "Saved" :
+                        "Process")
                                 .foregroundColor (.frameColor)
                                 .fontWeight (.semibold)
-                                .padding (.vertical, 10)
+                                .padding (.vertical, 65)
                                 .padding(.horizontal,20)
-                                .background(
-                                    LinearGradient(gradient: Gradient(colors: [Color.buttonColor1, Color.buttonColor2]), startPoint: .leading, endPoint: .trailing)
-                                )
+                                .background(.white)
                                 .clipShape (Capsule () )
                         })
                         .padding (.leading)
                         Spacer ()
                             
                     }else{
-                        Button(action: {camera.isTaken.toggle()}, label: {
+                        Button(action: camera.takePic, label: {
                             ZStack{
                                 Circle()
                                     .fill(Color.white)
@@ -83,7 +81,7 @@ struct CameraServiceView: View {
 }
            
 //Camara Model
-class CameraModel: ObservableObject{
+class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate{
     @Published var isTaken = false
     @Published var session = AVCaptureSession ()
     @Published var alert = false
@@ -91,6 +89,10 @@ class CameraModel: ObservableObject{
     @Published var output = AVCapturePhotoOutput()
     
     @Published var preview : AVCaptureVideoPreviewLayer!
+    
+    // Pic Data...
+    @Published var isSaved = false
+    @Published var picData = Data (count: 0)
     
     func Check(){
         // first checking camerahas got permission...
@@ -135,7 +137,49 @@ class CameraModel: ObservableObject{
         }catch{
             print (error.localizedDescription)
         }
+    }
+    
+    func takePic() {
+        DispatchQueue.global(qos: .background).async {
+            self.output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
+            self.session.stopRunning ()
+            
+            DispatchQueue.main.async {
+                withAnimation{self.isTaken.toggle()}
+            }
+        }
+    }
+    
+    func reTake (){
+        DispatchQueue.global (qos: .background) .async {
+            self.session.startRunning()
+            
+            DispatchQueue.main.async {
+                withAnimation{self.isTaken.toggle()}
+            }
+             //Limpiar al volver a tomar la foto
+            self.isSaved = false
+        }
+    }
+    
+    func photoOutput (_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?){
+        if error != nil{
+            return
+        }
+        print ("pic taken...")
         
+        guard let imageData = photo.fileDataRepresentation () else{return}
+        self.picData = imageData
+    }
+    
+    func savePic () {
+        let image = UIImage (data: self.picData)!
+        // saving Image...
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        
+        self.isSaved = true
+        
+        print ("saved Success fully")
     }
 }
 
