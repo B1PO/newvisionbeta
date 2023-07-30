@@ -2,12 +2,82 @@ import SwiftUI
 
 struct MainScreenView: View {
     @State private var isAnimating = false
-    
+    @State private var gradientRotation: Double = 0.0
+
     var body: some View {
+
         ZStack {
-            Color.backgroundColor
+            Color.slideMenuColor
                 .ignoresSafeArea(.all)
-            
+            VStack{
+                Text("N")
+                    .foregroundColor(.offButtonColor)
+                    .font(.custom("Impact", size: 60))
+                Text("E")
+                    .font(.custom("Impact", fixedSize: 60))
+                    .foregroundColor(.offButtonColor)
+                Text("W")
+                    .font(.custom("Impact", fixedSize: 55))
+                    .foregroundColor(.offButtonColor)
+                    .padding(.bottom, 20)
+                Text("V")
+                    .foregroundColor(.offButtonColor)
+                    .font(.custom("Impact", fixedSize: 40))
+                Text("I")
+                    .foregroundColor(.offButtonColor)
+                    .font(.custom("Impact", fixedSize: 40))
+                Text("S")
+                    .foregroundColor(.offButtonColor)
+                    .font(.custom("Impact", fixedSize: 40))
+                Text("I")
+                    .foregroundColor(.offButtonColor)
+                    .font(.custom("Impact", fixedSize: 40))
+                Text("O")
+                    .foregroundColor(.offButtonColor)
+                    .font(.custom("Impact", fixedSize: 40))
+                Text("N")
+                    .foregroundColor(.offButtonColor)
+                    .font(.custom("Impact", fixedSize: 40))
+
+            }
+            .padding(.leading,250)
+            VStack {
+                Spacer()
+                Button(action: {
+
+                }) {
+
+                    HStack {
+                        Text("START")
+                            .foregroundColor(.white)
+                            .bold()
+
+                        Image(systemName: "play")
+                            .bold()
+                            .font(.callout)
+
+                        .foregroundColor(.white)
+                    }
+
+                }
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 30)
+                        .strokeBorder(
+                            AngularGradient(gradient: Gradient(colors: [Color.buttonColor1, Color.white]), center: .center, angle: .degrees(gradientRotation)),
+                            lineWidth: 5
+                        )
+                        .animation(Animation.linear(duration: 5).repeatForever(autoreverses: false))
+                        .onAppear {
+                            gradientRotation = 360.0
+                        }
+                )
+
+
+                Spacer()
+            }
+            .padding(.top,650)
+            .padding(.leading,250)
             VStack(spacing: 2) {
                 ForEach(0..<Int(UIScreen.main.bounds.height / 20)) { _ in
                     RowOfDots(width: UIScreen.main.bounds.width, isAnimating: isAnimating)
@@ -16,20 +86,16 @@ struct MainScreenView: View {
                 }
             }
             .padding(.horizontal, 20)
-            
-            if isAnimating {
-                FloatingText()
-                    .animation(Animation.easeInOut(duration: 2.0).repeatForever(autoreverses: true))
-            }
         }
+        .statusBar(hidden: true)
         .onAppear {
             startAnimation()
         }
         .navigationBarHidden(true)
     }
-    
+
     private func startAnimation() {
-        withAnimation(Animation.linear(duration: 4.0).repeatForever(autoreverses: true)) {
+        withAnimation(Animation.linear(duration: 0.0).repeatForever(autoreverses: true)) {
             isAnimating.toggle()
         }
     }
@@ -38,7 +104,7 @@ struct MainScreenView: View {
 struct RowOfDots: View {
     var width: CGFloat
     var isAnimating: Bool
-    
+
     var body: some View {
         HStack(spacing: 10) {
             ForEach(0..<5) { _ in
@@ -51,9 +117,9 @@ struct RowOfDots: View {
 struct DotView: View {
     @State private var scale: CGFloat = 1.0
     @State private var isWhite = false
-    
+
     var isAnimating: Bool
-    
+
     var body: some View {
         ZStack {
             Circle()
@@ -73,51 +139,11 @@ struct DotView: View {
     }
 }
 
-struct FloatingText: View {
-    @State private var isWhite = true
-    
-    var body: some View {
-        VStack(spacing: 20) {
-            Text("N")
-                .foregroundColor(isWhite ? Color.white : Color.black)
-                .offset(x: randomOffset(), y: randomOffset())
-            Text("E")
-                .foregroundColor(isWhite ? Color.white : Color.black)
-                .offset(x: randomOffset(), y: randomOffset())
-            Text("W")
-                .foregroundColor(isWhite ? Color.white : Color.black)
-                .offset(x: randomOffset(), y: randomOffset())
-            Text("V")
-                .padding(.top, 20)
-                .foregroundColor(isWhite ? Color.white : Color.black)
-                .offset(x: randomOffset(), y: randomOffset())
-            Text("I")
-                .foregroundColor(isWhite ? Color.white : Color.black)
-                .offset(x: randomOffset(), y: randomOffset())
-            Text("S")
-                .foregroundColor(isWhite ? Color.white : Color.black)
-                .offset(x: randomOffset(), y: randomOffset())
-            Text("I")
-                .foregroundColor(isWhite ? Color.white : Color.black)
-                .offset(x: randomOffset(), y: randomOffset())
-            Text("O")
-                .foregroundColor(isWhite ? Color.white : Color.black)
-                .offset(x: randomOffset(), y: randomOffset())
-            Text("N")
-                .foregroundColor(isWhite ? Color.white : Color.black)
-                .offset(x: randomOffset(), y: randomOffset())
-        }
-        .font(.system(size: 30, weight: .bold, design: .default))
-    }
-    
-    private func randomOffset() -> CGFloat {
-        return CGFloat.random(in: -5...5)
-    }
-}
-
 struct MainScreenView_Previews: PreviewProvider {
     static var previews: some View {
         MainScreenView()
     }
 }
+
+
 
