@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct InformationView: View {
+    
+    @StateObject var homeModel = CarouselViewModel ()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        InfoFrameView()
+            .environmentObject (homeModel)
     }
 }
 
