@@ -10,7 +10,7 @@ struct NavigationBar: View {
                     .ignoresSafeArea(.all)
                 VStack {
                     Spacer()
-                    contentForSelectedOption() // Método que se encarga del contenido
+                    contentForSelectedOption()
                 }
                 .frame(maxHeight: 0)
                 .offset(y: -140) // Espacio entre el frame y la barra de pestañas
