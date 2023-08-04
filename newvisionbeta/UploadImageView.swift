@@ -12,7 +12,7 @@ struct UploadImageView: View {
                 .resizable()
                 .scaledToFit()
                 .cornerRadius(15.0)
-                .shadow(color: .black, radius: 4, x: 3, y: 3)
+                .shadow(color: .offButtonColor, radius: 3)
                 .padding()
             
             Text(model.resultText)

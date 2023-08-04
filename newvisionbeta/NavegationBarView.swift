@@ -65,6 +65,7 @@ struct NavigationBar: View {
                     .font(.title)
                     .padding()
                     .frame(width: 390, height: 700)
+                    
                     .background(Color.frameColor)
                     .cornerRadius(57)
             }
@@ -76,18 +77,19 @@ struct NavigationBar: View {
                     .foregroundColor(.white)
                     .font(.title)
                     .padding()
-                    .frame(width: 390, height: 700)
+                    .frame(width: 390, height: 1000)
                     .background(Color.frameColor)
                     .cornerRadius(57)
             }
             .transition(.asymmetric(insertion: .scale, removal: .opacity))
         case 3:
             VStack {
+                //Propiedades aplicadas a la vista desde acá cambian a sus similares en dentro de la vista invocada
                 UploadImageView()
                     .foregroundColor(.white)
-                    .font(.title)
-                    .padding()
-                    .frame(width: 390, height: 700)
+                    .padding(.top,180)
+                    .frame(width: 390, height: 850)
+                    .shadow(color: .black, radius: 3)
                     .background(Color.frameColor)
                     .cornerRadius(57)
             }
