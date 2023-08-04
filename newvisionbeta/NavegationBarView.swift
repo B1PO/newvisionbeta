@@ -14,7 +14,7 @@ struct NavigationBar: View {
                 }
                 .frame(maxHeight: 0)
                 .offset(y: -140) // Espacio entre el frame y la barra de pestañas
-                .animation(.spring()) 
+                .animation(.spring())
             }
             
             HStack(spacing: 80) { //Más espacio a los iconos
