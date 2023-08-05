@@ -26,7 +26,7 @@ struct HomePage: View {
     var body: some View {
         //Color.blue.ignoresSafeArea()
         NavigationView {
-            NavigationBar()
+            NavigationBarView()
                 .padding(.bottom, -63)
         }
     }

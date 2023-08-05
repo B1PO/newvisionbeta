@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct NavigationBar: View {
+struct NavigationBarView: View {
     @State private var selectedOption = 1
     
     var body: some View {
@@ -73,18 +73,19 @@ struct NavigationBar: View {
             // Agregar transición asimétrica para evitar parpadeos en el cambio de frame
         case 2:
             VStack {
-                Text("Camera")
-                    .foregroundColor(.white)
-                    .font(.title)
-                    .padding()
-                    .frame(width: 390, height: 1000)
-                    .background(Color.frameColor)
+                ActiveCameraView()
+                    .padding(.top, 259)
+//                    .foregroundColor(.white)
+//                    .font(.title)
+//                    .padding()
+                    .frame(width: 390, height: 1400)
+                    .background(Color.black)
                     .cornerRadius(57)
             }
             .transition(.asymmetric(insertion: .scale, removal: .opacity))
         case 3:
             VStack {
-                //Propiedades aplicadas a la vista desde acá cambian a sus similares en dentro de la vista invocada
+                //Propiedades aplicadas a la vista desde acá cambian a sus similares dentro de la vista invocada
                 UploadImageView()
                     .foregroundColor(.white)
                     .padding(.top,180)
@@ -144,6 +145,6 @@ struct SelectionModifier: ViewModifier {
 
 struct NavigationBar_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationBar()
+        NavigationBarView()
     }
 }

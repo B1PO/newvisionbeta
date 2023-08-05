@@ -40,7 +40,7 @@ class UIAVCaptureVideoPreviewView: UIView, AVCaptureVideoDataOutputSampleBufferD
     }
     
     func setupPreview() {
-        self.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        self.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 1000)
         
         let previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
         previewLayer.frame = self.frame
@@ -61,6 +61,7 @@ class UIAVCaptureVideoPreviewView: UIView, AVCaptureVideoDataOutputSampleBufferD
         
         self.captureSession.startRunning()
     }
+    
     
     // captureOutput will be called for each frame was written
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {

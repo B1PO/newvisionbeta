@@ -5,7 +5,8 @@ struct ActiveCameraView: View {
     @AppStorage("onboarding") var isOnboardingViewActive: Bool = false
     
     var body: some View {
-        VStack {
+        
+        ZStack {
             
             SwiftUIAVCaptureVideoPreviewView()
                 .ignoresSafeArea(.all, edges: .all)
@@ -23,6 +24,7 @@ struct ActiveCameraView: View {
                     .font(.system(.title3, design: .rounded))
                     .fontWeight(.bold)
             }
+            .padding(.bottom, 600)
             .buttonStyle(.borderedProminent)
             .buttonBorderShape(.capsule)
             .controlSize(.large)
