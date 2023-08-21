@@ -40,7 +40,7 @@ struct InfoFrameView: View {
                             }))
                     }
                 }
-                .padding(.top,25)
+                .padding(.top,3) // cambiar el padding de arriba
                 .padding (.horizontal,30)
                 
                 Button(action: ResetViews, label: {

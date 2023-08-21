@@ -60,11 +60,10 @@ struct NavigationBarView: View {
         switch selectedOption {
         case 1:
             VStack {
-                Text("Info frame")
-                    .foregroundColor(.white)
-                    .font(.title)
-                    .padding()
-                    .frame(width: 390, height: 700)
+                InformationView()
+                    .padding(.top, 400)
+                    .frame(width: 390, height: 850)
+                    //.padding(.top, 400)
                     
                     .background(Color.frameColor)
                     .cornerRadius(57)
@@ -74,11 +73,11 @@ struct NavigationBarView: View {
         case 2:
             VStack {
                 ActiveCameraView()
-                    .padding(.top, 259)
+                    .padding(.top, 180)
 //                    .foregroundColor(.white)
 //                    .font(.title)
 //                    .padding()
-                    .frame(width: 390, height: 1400)
+                    .frame(width: 390, height: 850)
                     .background(Color.black)
                     .cornerRadius(57)
             }

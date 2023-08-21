@@ -4,7 +4,8 @@ import SwiftUI
 struct newvisionbetaApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationBarView()
+            //NavigationBarView()
+            ContentView()
         }
     }
 }

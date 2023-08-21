@@ -1,16 +1,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selectedTab = "Home"
+    
     var body: some View {
-        ZStack{
-            Color.gray
-            VStack {
-                Text("Prueba de Splash")
-                    .foregroundColor(.yellow)
-            }
-            .padding()
-        }.ignoresSafeArea()
-    }
+        //HomeView(selectTab: $selectedTab) // Llamando a la vista HomeView
+        //HomeP()
+        MainSideView()
+        }
 }
 
 struct ContentView_Previews: PreviewProvider {

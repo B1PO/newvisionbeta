@@ -27,7 +27,7 @@ struct HomePage: View {
         //Color.blue.ignoresSafeArea()
         NavigationView {
             NavigationBarView()
-                .padding(.bottom, -63)
+                .padding(.bottom, -25)
         }
     }
 }

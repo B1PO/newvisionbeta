@@ -50,6 +50,7 @@ struct DetailView: View {
                 .offset(x: 0, y: -137)
                 .transition(.asymmetric(insertion: .scale, removal: .opacity))
             )
+            .padding(.top, 300)
             
 
         }//fin del zstac
